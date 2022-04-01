@@ -1,0 +1,59 @@
+body {
+  background: rgba(243, 139, 139, 0.8);
+}
+h1 {
+  color: red;
+  font-family: monospace;
+}
+#texto {
+  color: red;
+  font-family: monospace;
+}
+#menu ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+}
+#menu ul li {
+  border: 4px solid black;
+  background: #ffff;
+  margin: 10px;
+  padding: 10px;
+}
+#menu ul li a {
+  text-decoration: none;
+}
+.estilizar_caja {
+  border: 2px solid #000000;
+  background: gray;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 60%;
+  font-family: monospace;
+}
+#caja {
+  border: 2px solid #000000;
+  background: gray;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 60%;
+  font-family: monospace;
+}
+#texto {
+  border: 2px solid #000000;
+  background: gray;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 60%;
+  font-family: monospace;
+}
+#h1 {
+  color: #20012e;
+  color: #aa04f7;
+}
+#h2 {
+  color: rgba(170, 4, 247, 0.4);
+}

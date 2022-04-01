@@ -1,0 +1,85 @@
+// variables 
+@color-letra:red;
+@fuente: monospace;
+@sinEnlace: none;
+@fondo: #ffff;
+@fondoPaginal: rgba(243, 139, 139, 0.8);
+
+body{
+    background: @fondoPaginal;
+}
+
+h1{
+    color: @color-letra;
+    font-family: @fuente;
+}
+#texto{
+    color: @color-letra;
+    font-family: @fuente;
+}
+
+//anidacion 
+
+#menu{
+    ul{
+        width: 100%;
+        display: flex;
+        list-style: none;
+        li{
+            border: 4px solid black;
+            background: @fondo;
+            margin: 10px;
+            padding: 10px;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//mixins funciones
+
+.estilizar_caja{
+    border: 2px solid rgb(0,0,0);
+    background:gray;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    font-family: @fuente;
+}
+
+#caja{
+    .estilizar_caja();
+}
+
+#texto{
+    .estilizar_caja();
+}
+
+//mixins con condicional
+
+@colorBase: rgb(170, 4, 247);
+//2 eleciones vivo o opaco 
+@parametro:opaco;
+
+.fondo_condocinal(opaco;){
+    color: darken(@colorBase,40%);
+}
+.fondo_condocinal(vivo;){
+    color: lighten(@colorBase,20%);
+}
+.fondo_condocinal(@_){
+    color: @colorBase;
+}
+
+#h1{
+    .fondo_condocinal(@parametro)
+}
+#h2{
+    .fondo_condocinal(@parametro, 40)
+}
+
+.fondo_condocinal(opaco; @porcentaje){
+    color: fade(@colorBase, @porcentaje);
+}
